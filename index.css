@@ -1,6 +1,6 @@
 * {
 	box-sizing: border-box;
-	font-family: Google Sans, sans-serif;
+	font-family: Inter, sans-serif;
 }
 
 hr {
@@ -14,7 +14,7 @@ body {
 }
 
 .title {
-	font-family: Google Sans, sans-serif;
+	font-family: Inter, sans-serif;
     border-top-left-radius: 30px;
     border-bottom-right-radius: 30px;
 	padding: 5px;
