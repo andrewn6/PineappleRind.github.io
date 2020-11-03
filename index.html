@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | pineapplerind</title>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body class="dark" id="body">
+        <ul class="nav">
+            <li><a css-data="2" href="https://github.com/pineapplerind">GitHub</a></li>
+            <li><a css-data="3" onclick="snackbar()">Discord</a></li>
+            <li><a css-data="4" href="/projects">Projects</a></li>
+            <li><a css-data="5" href="https://codepen.io/pineapplerind">Codepen</a></li>
+          </ul>
+    <div class="main">
+        <h1 class="title">
+            PineappleRind
+            <hr>
+            <p>frontend web developer</p>
+        </h1>
+    </div>
+    <div id="snackbar">
+        <h1>Discord</h1>
+        <p class="subheading" id="p" onclick="copy();">pr#0215
+            <span id="copied" class="tooltiptext">Copied!</span>
+        </p>
+    </div>
+    <div id="overlay"></div>
+    <script src="index.js"></script>
+    <style>
+        </style>
+</body>
+</html>

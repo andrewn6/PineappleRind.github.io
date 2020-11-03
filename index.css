@@ -1,0 +1,228 @@
+* {
+	box-sizing: border-box;
+	font-family: Google Sans, sans-serif;
+}
+
+hr {
+	margin:5px;
+}
+body {
+	height: 100vh;
+	width: 100vw;
+    margin: 0;
+    transition:0.1s;
+}
+
+.title {
+	font-family: Google Sans, sans-serif;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+	padding: 5px;
+	font-size: 6vw;
+	font-weight: 900;
+    text-align: center;
+    width:600px;
+    margin-left:calc(50% - 300px);
+    margin-top: 100px;
+    background:linear-gradient(to right, rgb(111, 128, 224), rgb(111, 184, 218));
+    border:3px solid rgb(0, 0, 0);
+    color:rgb(17, 17, 17);
+    transition:1s;
+}
+
+.title p {
+	font-size:30px;
+	margin:0;
+}
+
+.main {
+	height: 100%;
+	margin: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 1;
+	animation: adjust 100s;
+}
+
+.nav {
+	list-style-type: none;
+	margin: 0;
+	padding: 10px;
+	overflow: hidden;
+	position: fixed;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	transition: 1s;
+	height: 70px;
+	left: 0;
+	right: 0;
+	z-index: 2;
+	top: calc(50% - 70px);
+	overflow: visible;
+}
+
+.subheading {
+	font-size:30px;
+	font-family:Commisioner, sans-serif;
+}
+
+li a {
+	display: block;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	margin-left: 5vw;
+	margin-right: 5vw;
+	padding: 25px;
+	border-radius: 40px;
+	background: #2674e8;
+	box-shadow: 20px 20px 60px #2075c5, -20px -20px 60px #2cabff;
+	transition: 300ms;
+	font-size: 20px;
+}
+
+li a[css-data="2"] {
+	background: #2660e8;
+	box-shadow: 20px 20px 60px #2052c5, -20px -20px 60px #2c6eff;
+}
+
+li a[css-data="3"] {
+	background: #3655ec;
+	box-shadow: 20px 20px 60px #2e48c9, -20px -20px 60px #3e62ff;
+}
+
+li a[css-data="4"] {
+	background: #423fd9;
+	box-shadow: 20px 20px 60px #3836b8, -20px -20px 60px #4c48fa;
+}
+
+li a[css-data="5"] {
+	background: #7747fa;
+	box-shadow: 20px 20px 60px #653cd5, -20px -20px 60px #8952ff;
+}
+
+li a:hover {
+	box-shadow: -2px 2px 0 rgba(255, 255, 255, 0.7);
+	transform:scale(1.1);
+}
+
+li a:active {
+	box-shadow: 0 0 0 0 rgba(0,0,0,0);
+	transform:translate(-2px, 2px) scale(1.1);
+	transition:none;
+}
+
+@media only screen and (max-width:800px) {
+	h1 {
+		font-size: 10vw;
+	}
+}
+
+/* Dark mode */
+
+body.dark {
+    background-color:rgb(4, 0, 53);
+}
+
+body.dark h1 {
+    background:linear-gradient(to right, rgb(24, 44, 155), rgb(5, 57, 82));
+    border:3px solid white;
+    color:white;
+}
+
+#snackbar {
+	visibility: hidden;
+	width:40%;
+	height:30%;
+	margin-left: -125px;
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	border-radius: 2px;
+	padding: 16px;
+	position: fixed;
+	z-index: 6;
+	left: 40%;
+	bottom: 40%;
+	font-size: 17px;
+  }
+  
+  #snackbar.appear {
+	visibility: visible;
+	-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+	animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+
+  #overlay {
+	  background-color:#000000d3;
+	  position:fixed;
+	  z-index:5;
+	  top:0;
+	  left:0;
+	  right:0;
+	  bottom:0;
+	  opacity:0;
+	  transition:1s;
+	  display:none;
+  }
+
+  #overlay.show {
+	  opacity:1;
+	  display:block;
+  }
+
+
+/* Tooltip text */
+.subheading .tooltiptext {
+  background-color: rgb(13, 170, 65);
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  width: 120px;
+  left: 50%;
+  bottom:100px;
+  margin-left: -60px;
+  opacity:0;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+  transition:0.2s;
+}
+
+.subheading .tooltiptext::after {
+	content: " ";
+	position: absolute;
+	top: 100%; /* At the bottom of the tooltip */
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: rgb(13, 170, 65) transparent transparent transparent;
+  }
+  
+  @-webkit-keyframes fadein {
+	  from {bottom:0; opacity:0;}
+	to {bottom: 40%; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+	  from {bottom:0; opacity:0;}
+	to {bottom: 40%; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+	from {bottom: 40%; opacity: 1;} 
+	to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+	from {bottom: 40%; opacity: 1;}
+	to {bottom: 0; opacity: 0;}
+  }
