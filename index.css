@@ -7,10 +7,14 @@ hr {
 	margin:5px;
 }
 body {
-	height: 100vh;
-	width: 100vw;
-    margin: 0;
-    transition:0.1s;
+	background-color:rgb(4, 0, 53);
+	color:white;
+}
+
+h1.title {
+    background:linear-gradient(to right, rgb(24, 44, 155), rgb(5, 57, 82));
+    border:3px solid white;
+    color:white;
 }
 
 .title {
@@ -123,18 +127,6 @@ li a:active {
 	}
 }
 
-/* Dark mode */
-
-body.dark {
-    background-color:rgb(4, 0, 53);
-}
-
-body.dark h1 {
-    background:linear-gradient(to right, rgb(24, 44, 155), rgb(5, 57, 82));
-    border:3px solid white;
-    color:white;
-}
-
 #snackbar {
 	visibility: hidden;
 	width:40%;
@@ -206,6 +198,92 @@ body.dark h1 {
 	border-style: solid;
 	border-color: rgb(13, 170, 65) transparent transparent transparent;
   }
+
+
+  /* Projects page */
+
+  .flex-title {
+	  display:flex;
+	  justify-content: center;
+  }
+
+  h1.projects-title {
+	  margin-left: auto;
+	  margin-right: auto;
+	  color: rgb(26, 26, 26);
+	  background-color:rgb(211, 211, 211);
+	  width: 100%;
+	  margin-top:0;
+	  display:flex;
+	  justify-content: center;
+	  padding: 20px;
+	  font-size: 50px;
+	  box-shadow: 0 10px 40px 5px rgba(0,0,0,0.1);
+	  border-bottom: 2px solid rgb(206, 206, 206);
+	  border-top-left-radius: 7px;
+	  border-top-right-radius: 7px;
+  }
+
+  .modal-box {
+	  position: fixed;
+	  top: 10%;
+	  left: 15%;
+	  bottom: 10%;
+	  right: 15%;
+	  background-color:rgb(248, 248, 248);
+	  box-shadow: 0 10px 40px 5px rgba(175, 172, 214, 0.288);
+	  border-radius: 7px;
+	  animation: load 2s;
+  }
+
+  .projects-wrap {
+	display:flex;
+	flex-direction: row;
+	width: 100%;
+	position: relative;
+	flex-wrap: wrap;
+}
+
+.project-item {
+	background-color:#fff;
+	color:black;
+	text-align:right;
+	padding:20px;
+	box-shadow: 0 0 20px 5px rgba(0,0,0,0.13);
+	border-radius:10px;
+	max-width:50%;
+	min-width:33%;
+	max-height:300px;
+	margin: 10px;
+}
+
+.project-item .project-name {
+	margin:0;
+	font-weight:600;
+}
+
+.project-item .project-desc {
+	margin:0;
+	font-weight:300;
+}
+
+.project-thumb {
+	min-width:100%;
+	max-width:100%;
+	max-height:80%;
+}
+
+  @-webkit-keyframes load {
+	  from {opacity: 0; transform: translateY(-20px)}
+  }
+
+  @keyframes load {
+	from {opacity: 0; transform: translateY(-20px)}
+  }
+
+  @-moz-keyframes load {
+	from {opacity: 0; transform: translateY(-20px)}
+   }
   
   @-webkit-keyframes fadein {
 	  from {bottom:0; opacity:0;}
