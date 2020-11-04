@@ -39,7 +39,7 @@ window.addEventListener("keydown", function(e) {
   }
 
 function copy() { 
-  let text = "pr#0215";
+  let text = "pr#2020";
   navigator.clipboard.writeText(text)
   let tooltip = document.getElementById('copied');
   tooltip.style.opacity = '1';
