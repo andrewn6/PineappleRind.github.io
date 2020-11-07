@@ -32,8 +32,7 @@ h1.title {
     border: 3px solid rgb(0, 0, 0);
     color: rgb(17, 17, 17);
     transition: 1s;
-    position: absolute;
-    top: 50px;
+    margin-top: 100px;
 }
 
 .title p {
@@ -44,7 +43,6 @@ h1.title {
 .main {
     height: 100%;
     margin: 0;
-    position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
@@ -57,17 +55,13 @@ h1.title {
     margin: 0;
     padding: 10px;
     overflow: hidden;
-    position: absolute;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     transition: 1s;
     height: 70px;
-    left: 0;
-    right: 0;
     z-index: 2;
-    top: calc(50% - 70px);
     overflow: visible;
 }
 
@@ -91,6 +85,7 @@ li a {
     margin-left: 10px;
     margin-right: 10px;
     cursor: pointer;
+    min-width: 50px;
 }
 
 li a[css-data="2"] {
@@ -226,6 +221,23 @@ h1.projects-title {
     border-top-right-radius: 7px;
 }
 
+h1.projects-title span {
+    margin-top: 4px;
+    height: 27px;
+    width: 27px;
+    display: inline-block;
+    position: absolute;
+    left: 10px;
+    top: 30px;
+    font-size: 35px;
+    line-height: 27px;
+    text-align: center;
+    padding: 0;
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.422);
+    cursor: pointer;
+}
+
 .modal-box {
     position: fixed;
     top: 10%;
@@ -236,6 +248,7 @@ h1.projects-title {
     box-shadow: 0 10px 40px 5px rgba(175, 172, 214, 0.288);
     border-radius: 7px;
     animation: load 2s;
+    overflow: scroll;
 }
 
 .projects-wrap {
@@ -258,6 +271,11 @@ h1.projects-title {
     max-height: 300px;
     margin: 10px;
     transition: 0.5s;
+}
+
+.project-item.inactive:hover {
+    transform: translateY(0px);
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.13);
 }
 
 .project-item:hover {

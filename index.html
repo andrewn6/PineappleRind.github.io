@@ -10,12 +10,6 @@
 </head>
 
 <body class="dark" id="body">
-    <ul class="nav">
-        <li><a css-data="2" href="https://github.com/pineapplerind">GitHub</a></li>
-        <li><a css-data="3" onclick="snackbar()">Discord</a></li>
-        <li><a css-data="4" href="/projects">Projects</a></li>
-        <li><a css-data="5" href="/redirect-codepen">Codepen</a></li>
-    </ul>
     <div class="main">
         <h1 class="title">
             PineappleRind
@@ -23,6 +17,12 @@
             <p>frontend web developer</p>
         </h1>
     </div>
+    <ul class="nav">
+        <li><a css-data="2" href="https://github.com/pineapplerind">GitHub</a></li>
+        <li><a css-data="3" onclick="snackbar()">Discord</a></li>
+        <li><a css-data="4" href="/projects">Projects</a></li>
+        <li><a css-data="5" href="/redirect-codepen">Codepen</a></li>
+    </ul>
     <div id="snackbar">
         <h1>Discord</h1>
         <p class="subheading" id="p" onclick="copy();">pr#2020
@@ -31,7 +31,13 @@
     </div>
     <div id="overlay"></div>
     <script src="index.js"></script>
-    <script></script>
+    <script>
+        let author = 'pineapplerind. '
+        let intro = 'Made by '
+        let contact = 'Email: pineapplerind.info@gmail.com'
+
+        console.log(intro + author + contact);
+    </script>
 </body>
 
 </html>
