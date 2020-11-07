@@ -12,6 +12,14 @@ function randomPass() {
     let otherOutput = document.getElementById('outputMobile');
     otherOutput.innerHTML = finalResult;
 
+    if (otherOutput.innerHTML.length >= 20 && otherOutput.innerHTML.length <= 25) {
+        otherOutput.style.fontSize = '25px'
+    } else if (otherOutput.innerHTML.length <= 30 && otherOutput.innerHTML.length >= 25) {
+        otherOutput.style.fontSize = '20px'
+    } else if (otherOutput.innerHTML.length <= 33 && otherOutput.innerHTML.length >= 30) {
+        otherOutput.style.fontSize = '15px'
+    }
+
     let overlay = document.getElementById('overlay');
     overlay.style.width = '100%';
 
