@@ -5,6 +5,36 @@ body {
   font-family: Inter, sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: blue;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: #eee;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  padding: 10px;
+  pointer-events: all;
+}
+header h1 {
+  font-size: 20px;
+  margin: 0;
+  margin-left: 10px;
+}
+
 #output {
   word-wrap: break-word;
 }
