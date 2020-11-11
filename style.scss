@@ -8,6 +8,7 @@
         right: 0;
         bottom: 0;
         left: 0;
+        transition: 0.5s;
     }
     
     body {
@@ -64,13 +65,42 @@
             margin: 50px;
             max-width: 50%;
             min-width: 10px;
+            .message {
+                display: none;
+            }
         }
         .flex-box.output {
             background-color: rgb(154, 239, 161);
             display: block;
         }
+        .flex-box.boxshadow {
+            background-color: #f1f0fa;
+            padding: 30px;
+            border: none;
+            box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.137);
+            width: calc(80%- 30px);
+        }
         #generate {
             display: block;
+        }
+    }
+
+    main[data-css="boxshadow"] {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        div#div {
+            height: 500px;
+            width: 40%;
+            margin-top: 40px;
+            border: none;
+            font-size: 30px;
+            font-weight: 600;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
     }
     
@@ -113,9 +143,8 @@
     
     .overlay {
         @include overlay;
-        background-color: rgba(65, 65, 147, 0.897);
+        background-color: rgba(65, 65, 147, 0.959);
         color: white;
-        display: none;
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -126,18 +155,24 @@
         h1 {
             margin: 0;
             font-size: calc(35px + 5vw);
-            font-weight: 900;
+            font-weight: 900
         }
         h2 {
             margin: 0;
             font-size: calc(15px + 5vw);
-            font-weight: 300;
+            font-weight: 300
         }
         hr {
             width: 50%;
         }
         div {
             overflow: scroll;
+        }
+        .code {
+            padding: 10px;
+            background-color:rgba(0, 0, 0, 0.5);
+            border-radius:3px;
+            font-size:15px;
         }
     }
     
@@ -180,5 +215,16 @@
         .overlay {
             display: flex;
             opacity: 1;
+        }
+        main[data-css="boxshadow"] {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            div#div {
+                max-width: 70%;
+            }
+            .message {
+                display: block;
+            }
         }
     }
