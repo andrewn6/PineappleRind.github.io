@@ -308,7 +308,7 @@ h1.projects-title span {
 
 .projects-wrap {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     width: 100%;
     position: relative;
     flex-wrap: wrap;
@@ -321,8 +321,8 @@ h1.projects-title span {
     padding: 20px;
     box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.13);
     border-radius: 10px;
-    max-width: calc(250px + 10%);
     min-width: 100px;
+    max-width: calc(200px + 20%);
     max-height: 300px;
     margin: 10px;
     transition: 0.5s;
@@ -352,6 +352,12 @@ h1.projects-title span {
     min-width: 100%;
     max-width: 100%;
     max-height: 80%;
+}
+
+@media only screen and (max-width:1000px) {
+    .project-item {
+        max-width: 100%;
+    }
 }
 
 @-webkit-keyframes load {
