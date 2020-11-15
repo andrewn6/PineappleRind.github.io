@@ -152,6 +152,7 @@
         transition: 0.5s;
         width: 0;
         overflow: scroll;
+        display: none;
         h1 {
             margin: 0;
             font-size: calc(35px + 5vw);

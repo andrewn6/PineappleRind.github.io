@@ -22,22 +22,13 @@ header {
   z-index: 100;
   background-color: #eee;
   font-size: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
+  justify-content: center;
+  align-items: center;
   height: fit-content;
   padding: 10px;
   pointer-events: all;
 }
-
 header h1 {
   font-size: 20px;
   margin: 0;
@@ -50,13 +41,10 @@ header h1 {
 
 main {
   position: absolute;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto auto;
-      grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto auto;
   grid-gap: 10px;
 }
-
 main .flex-box {
   border-radius: 10px;
   background-color: #9aa0ef;
@@ -66,77 +54,59 @@ main .flex-box {
   max-width: 50%;
   min-width: 10px;
 }
-
 main .flex-box .message {
   display: none;
 }
-
 main .flex-box.output {
   background-color: #9aefa1;
   display: block;
 }
-
 main .flex-box.boxshadow {
   background-color: #f1f0fa;
   padding: 30px;
   border: none;
-  -webkit-box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.137);
-          box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.137);
+  box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.137);
   width: calc(80%- 30px);
 }
-
 main #generate {
   display: block;
 }
 
-main[data-css="boxshadow"] {
-  display: -webkit-box;
-  display: -ms-flexbox;
+main[data-css=boxshadow] {
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-direction: row;
+  justify-content: space-around;
   width: 100%;
 }
-
-main[data-css="boxshadow"] div#div {
+main[data-css=boxshadow] div#div {
   height: 500px;
   width: 40%;
   margin-top: 40px;
   border: none;
   font-size: 30px;
   font-weight: 600;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
   font-size: 40px;
 }
 
-input[type="range"] {
+input[type=range] {
   -webkit-appearance: none;
   background: #3bade3;
+  background: -moz-linear-gradient(45deg, #3bade3 0%, #576fe6 25%, #9844b7 51%, #ff357f 100%);
+  background: -webkit-linear-gradient(45deg, #3bade3 0%, #576fe6 25%, #9844b7 51%, #ff357f 100%);
+  background: -ms-linear-gradient(45deg, #3bade3 0%, #576fe6 25%, #9844b7 51%, #ff357f 100%);
   background: linear-gradient(45deg, #3bade3 0%, #576fe6 25%, #9844b7 51%, #ff357f 100%);
   height: 3px;
   outline: none;
 }
 
-input[type="range"]::-webkit-slider-thumb {
+input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   border: 2px solid;
@@ -147,17 +117,14 @@ input[type="range"]::-webkit-slider-thumb {
   bottom: 11px;
   border: 2px solid #4135a2;
   background: #9aa0ef;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
   opacity: 0.9;
 }
 
-input[type="range"]:hover::-webkit-slider-thumb,
-input[type="range"]:hover::-webkit-slider-thumb {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+input[type=range]:hover::-webkit-slider-thumb,
+input[type=range]:hover::-webkit-slider-thumb {
+  transform: scale(1.1);
   opacity: 1;
 }
 
@@ -167,46 +134,34 @@ input[type="range"]:hover::-webkit-slider-thumb {
   right: 0;
   bottom: 0;
   left: 0;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
   background-color: rgba(65, 65, 147, 0.959);
   color: white;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   opacity: 0;
   transition: 0.5s;
   width: 0;
   overflow: scroll;
+  display: none;
 }
-
 .overlay h1 {
   margin: 0;
   font-size: calc(35px + 5vw);
   font-weight: 900;
 }
-
 .overlay h2 {
   margin: 0;
   font-size: calc(15px + 5vw);
   font-weight: 300;
 }
-
 .overlay hr {
   width: 50%;
 }
-
 .overlay div {
   overflow: scroll;
 }
-
 .overlay .code {
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.5);
@@ -217,40 +172,28 @@ input[type="range"]:hover::-webkit-slider-thumb {
 footer {
   position: fixed;
   bottom: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   right: 0;
   left: 0;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 footer .foot {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 10px;
   border-radius: 4px;
 }
-
 footer .foot p,
 footer .foot a {
   color: white;
   margin: 0;
-  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
 @media only screen and (max-width: 780px) {
   main {
     position: absolute;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     width: 100%;
   }
   main .flex-box {
@@ -262,29 +205,21 @@ footer .foot a {
   main #generate {
     display: none;
   }
+
   .overlay {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     opacity: 1;
   }
-  main[data-css="boxshadow"] {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+
+  main[data-css=boxshadow] {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
-  main[data-css="boxshadow"] div#div {
+  main[data-css=boxshadow] div#div {
     max-width: 70%;
   }
-  main[data-css="boxshadow"] .message {
+  main[data-css=boxshadow] .message {
     display: block;
   }
 }
-/*# sourceMappingURL=style.css.map */
